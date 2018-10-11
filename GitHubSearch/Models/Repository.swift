@@ -16,6 +16,9 @@ struct Repository: Decodable {
     let description: String?
     let url: String?
     let stargazers_count: Int?
+    let forks: Int?
+    let watchers: Int?
+    let license: License?
     let language: String?
     let updated_at: String?
 }

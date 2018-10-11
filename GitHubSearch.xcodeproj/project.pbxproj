@@ -24,6 +24,7 @@
 		66C9FC63216DEBCB0018EF4B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C9FC62216DEBCB0018EF4B /* UIColor.swift */; };
 		66EFC870216F42AC007CC5A1 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFC86F216F42AC007CC5A1 /* UIViewController.swift */; };
 		66EFC872216F4544007CC5A1 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFC871216F4544007CC5A1 /* AboutTableViewController.swift */; };
+		66EFC874216F9D68007CC5A1 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFC873216F9D68007CC5A1 /* License.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		66C9FC62216DEBCB0018EF4B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		66EFC86F216F42AC007CC5A1 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		66EFC871216F4544007CC5A1 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		66EFC873216F9D68007CC5A1 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		930EE667E30CE53931B088FD /* Pods-GitHubSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubSearch/Pods-GitHubSearch.release.xcconfig"; sourceTree = "<group>"; };
 		FB8279F5F0E7D9F25D2ADC8C /* Pods-GitHubSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubSearch/Pods-GitHubSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +123,7 @@
 			children = (
 				66C9FC50216C94B10018EF4B /* Repositories.swift */,
 				66C9FC52216C94BC0018EF4B /* Repository.swift */,
+				66EFC873216F9D68007CC5A1 /* License.swift */,
 				66C9FC54216CADB30018EF4B /* SearchParameters.swift */,
 			);
 			path = Models;
@@ -284,6 +287,7 @@
 				66C9FC51216C94B10018EF4B /* Repositories.swift in Sources */,
 				66C9FC53216C94BC0018EF4B /* Repository.swift in Sources */,
 				66890D22216E0E1E00DDF49B /* NetworkManager.swift in Sources */,
+				66EFC874216F9D68007CC5A1 /* License.swift in Sources */,
 				66C9FC55216CADB30018EF4B /* SearchParameters.swift in Sources */,
 				66C9FC4E216C8EBE0018EF4B /* GitHubService.swift in Sources */,
 				66C9FC63216DEBCB0018EF4B /* UIColor.swift in Sources */,
