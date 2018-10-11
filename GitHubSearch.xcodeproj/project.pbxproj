@@ -23,6 +23,7 @@
 		66C9FC61216DEA0F0018EF4B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C9FC60216DEA0F0018EF4B /* Colors.swift */; };
 		66C9FC63216DEBCB0018EF4B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C9FC62216DEBCB0018EF4B /* UIColor.swift */; };
 		66EFC870216F42AC007CC5A1 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFC86F216F42AC007CC5A1 /* UIViewController.swift */; };
+		66EFC872216F4544007CC5A1 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFC871216F4544007CC5A1 /* AboutTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		66C9FC60216DEA0F0018EF4B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		66C9FC62216DEBCB0018EF4B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		66EFC86F216F42AC007CC5A1 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		66EFC871216F4544007CC5A1 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		930EE667E30CE53931B088FD /* Pods-GitHubSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubSearch/Pods-GitHubSearch.release.xcconfig"; sourceTree = "<group>"; };
 		FB8279F5F0E7D9F25D2ADC8C /* Pods-GitHubSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubSearch/Pods-GitHubSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +105,7 @@
 				66C9FC5F216DE9F70018EF4B /* Common */,
 				66C9FC3B216C88A80018EF4B /* AppDelegate.swift */,
 				66C9FC3D216C88A80018EF4B /* ViewController.swift */,
+				66EFC871216F4544007CC5A1 /* AboutTableViewController.swift */,
 				66C9FC3F216C88A80018EF4B /* Main.storyboard */,
 				66C9FC42216C88AA0018EF4B /* Assets.xcassets */,
 				66C9FC44216C88AA0018EF4B /* LaunchScreen.storyboard */,
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66C9FC3E216C88A80018EF4B /* ViewController.swift in Sources */,
+				66EFC872216F4544007CC5A1 /* AboutTableViewController.swift in Sources */,
 				66C9FC61216DEA0F0018EF4B /* Colors.swift in Sources */,
 				66EFC870216F42AC007CC5A1 /* UIViewController.swift in Sources */,
 				66C9FC51216C94B10018EF4B /* Repositories.swift in Sources */,

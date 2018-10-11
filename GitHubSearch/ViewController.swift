@@ -28,7 +28,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
+        //self.hideKeyboardWhenTappedAround()
+        tableview.delegate = self
         searchTextField.delegate = self
         setStyle()
     }
@@ -79,6 +80,16 @@ class ViewController: UIViewController {
             self?.activityIndicator.stopAnimating()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            segue.identifier == "showAboutSegue",
+            let repo = sender as? Repository,
+            let dvc = segue.destination as? AboutTableViewController
+            else { return }
+        
+        dvc.repo = repo
+    }
 }
 
 extension ViewController: UITextFieldDelegate {
@@ -90,7 +101,11 @@ extension ViewController: UITextFieldDelegate {
 }
 
 extension ViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let repo = repositories?.items[indexPath.row] else { return }
+        self.performSegue(withIdentifier: "showAboutSegue", sender: repo)
+    }
 }
 
 extension ViewController: UITableViewDataSource {
