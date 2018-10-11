@@ -14,11 +14,6 @@ enum Sort: String { // Default: results are sorted by best match.
     case updated
 }
 
-enum Order: String { // Default: desc
-    case asc
-    case desc
-}
-
 struct Page {
     var currentPage: Int
     var perPage: Int
@@ -27,8 +22,17 @@ struct Page {
 struct SearchParameters {
     var qualifiers: String
     var sort: Sort?
-    var order = Order.desc
     var page: Page?
+    
+    init(qualifiers: String, sort: Sort?, page: Page?) {
+        self.qualifiers = qualifiers
+        self.sort = sort
+        self.page = page
+    }
+    
+    init(qualifiers: String) {
+        self.init(qualifiers: qualifiers, sort: nil, page: nil)
+    }
     
     func make() -> [String: Any] {
         var parameters: [String: Any] = [:]
