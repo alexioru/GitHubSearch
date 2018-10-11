@@ -26,12 +26,31 @@
                                     <constraint firstAttribute="height" constant="35" id="u0f-N5-Lm7"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Egs-qx-tsC">
+                                <rect key="frame" x="79.5" y="74.5" width="279.5" height="30"/>
+                                <color key="backgroundColor" red="0.24654039740562439" green="0.26252287626266479" blue="0.27918407320976257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRa-fU-Fq5">
                                 <rect key="frame" x="16" y="120.5" width="55.5" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cKr-RG-5y5">
+                                <rect key="frame" x="79.5" y="116.5" width="279.5" height="29"/>
+                                <segments>
+                                    <segment title="Match"/>
+                                    <segment title="Stars"/>
+                                    <segment title="Forks"/>
+                                </segments>
+                                <color key="tintColor" red="0.011455828323960304" green="0.38442963361740112" blue="0.80014735460281372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="sortChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="eXo-f3-cog"/>
+                                </connections>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Njd-Rl-qgz">
                                 <rect key="frame" x="0.0" y="156.5" width="375" height="510.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,31 +85,17 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="99R-Fv-97B"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Egs-qx-tsC">
-                                <rect key="frame" x="79.5" y="74.5" width="279.5" height="30"/>
-                                <color key="backgroundColor" red="0.24654039740562439" green="0.26252287626266479" blue="0.27918407320976257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                            </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cKr-RG-5y5">
-                                <rect key="frame" x="79.5" y="116.5" width="279.5" height="29"/>
-                                <segments>
-                                    <segment title="Match"/>
-                                    <segment title="Stars"/>
-                                    <segment title="Forks"/>
-                                </segments>
-                                <color key="tintColor" red="0.011455828323960304" green="0.38442963361740112" blue="0.80014735460281372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="sortChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="eXo-f3-cog"/>
-                                </connections>
-                            </segmentedControl>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="x5F-Nq-qsG">
+                                <rect key="frame" x="177.5" y="355.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.14052203297615051" green="0.16048264503479004" blue="0.18131551146507263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cKr-RG-5y5" firstAttribute="trailing" secondItem="Egs-qx-tsC" secondAttribute="trailing" id="Bha-jx-B0T"/>
+                            <constraint firstItem="x5F-Nq-qsG" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="BiC-dg-leK"/>
                             <constraint firstItem="Njd-Rl-qgz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jey-QD-fjq"/>
                             <constraint firstItem="Egs-qx-tsC" firstAttribute="centerY" secondItem="8hy-Gm-xpm" secondAttribute="centerY" id="Rfa-iy-gXY"/>
+                            <constraint firstItem="x5F-Nq-qsG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SfJ-HE-vAX"/>
                             <constraint firstItem="Njd-Rl-qgz" firstAttribute="top" secondItem="cKr-RG-5y5" secondAttribute="bottom" constant="12" id="SvW-UW-mzI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Egs-qx-tsC" secondAttribute="trailing" constant="16" id="WjY-9H-2aX"/>
                             <constraint firstItem="Egs-qx-tsC" firstAttribute="leading" secondItem="cKr-RG-5y5" secondAttribute="leading" id="Xjo-wK-m63"/>
@@ -107,6 +112,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="5hq-YA-uLa"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="x5F-Nq-qsG" id="omd-lN-UH8"/>
                         <outlet property="logoImageView" destination="8hy-Gm-xpm" id="uuI-6g-1JO"/>
                         <outlet property="searchTextField" destination="Egs-qx-tsC" id="gAP-nX-nLN"/>
                         <outlet property="sortSegmentControl" destination="cKr-RG-5y5" id="Mhi-Nk-Tk7"/>

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var sortSegmentControl: UISegmentedControl!
     @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let networkManager = NetworkManager()
     var sort: Sort?
@@ -62,6 +63,7 @@ class ViewController: UIViewController {
                                                 sort: sort,
                                                 page: Page(currentPage: 1, perPage: 10))
         let parameters = searchParameters.make()
+        activityIndicator.startAnimating()
         networkManager.getRepositories(parameters: parameters) { [weak self] (repositories, error) in
             if let repositories = repositories {
                 self?.repositories = repositories
@@ -69,8 +71,11 @@ class ViewController: UIViewController {
             }
             
             if let error = error {
-                print(error)
+                let alert = UIAlertController(title: "Error", message: error, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self?.present(alert, animated: true, completion: nil)
             }
+            self?.activityIndicator.stopAnimating()
         }
     }
 }
